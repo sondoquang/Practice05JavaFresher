@@ -10,7 +10,7 @@ public class NormalStudent extends Student {
 
     public NormalStudent() {}
 
-    public NormalStudent(String fullName, Date doB, boolean sex, String phoneNumber, String universityName, GradeLevel gradeLevel, int englishScore, double entryTestScore) {
+    public NormalStudent(String fullName, Date doB, boolean sex, String phoneNumber, String universityName, String gradeLevel, int englishScore, double entryTestScore) {
         super(fullName, doB, sex, phoneNumber, universityName, gradeLevel);
         this.englishScore = englishScore;
         this.entryTestScore = entryTestScore;

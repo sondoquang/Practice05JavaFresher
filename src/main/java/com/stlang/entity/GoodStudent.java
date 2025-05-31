@@ -1,6 +1,5 @@
 package com.stlang.entity;
 
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class GoodStudent extends Student {
@@ -11,7 +10,7 @@ public class GoodStudent extends Student {
     public GoodStudent() {
     }
 
-    public GoodStudent(String fullName, Date doB, boolean sex, String phoneNumber, String universityName, GradeLevel gradeLevel, double gpa, String bestRewardName) {
+    public GoodStudent(String fullName, Date doB, boolean sex, String phoneNumber, String universityName, String gradeLevel, double gpa, String bestRewardName) {
         super(fullName, doB, sex, phoneNumber, universityName, gradeLevel);
         this.gpa = gpa;
         this.bestRewardName = bestRewardName;
@@ -34,7 +33,7 @@ public class GoodStudent extends Student {
     }
 
 
-    @Override // Thêm @Override để đánh dấu rằng đây là phương thức được kế thừa (nếu có lớp cha)
+    @Override
     public void ShowMyInfo() {
         super.ShowMyInfo();
         System.out.println("GPA: " + gpa);

@@ -10,12 +10,12 @@ public class Student {
     private Boolean sex;
     private String phoneNumber;
     private String universityName;
-    private GradeLevel gradeLevel;
+    private String gradeLevel;
 
     public Student() {
     }
 
-    public Student(String fullName, Date doB, Boolean sex, String phoneNumber, String universityName, GradeLevel gradeLevel) {
+    public Student(String fullName, Date doB, Boolean sex, String phoneNumber, String universityName, String gradeLevel) {
         this.fullName = fullName;
         this.doB = doB;
         this.sex = sex;
@@ -64,11 +64,11 @@ public class Student {
         this.universityName = universityName;
     }
 
-    public GradeLevel getGradeLevel() {
+    public String getGradeLevel() {
         return gradeLevel;
     }
 
-    public void setGradeLevel(GradeLevel gradeLevel) {
+    public void setGradeLevel(String gradeLevel) {
         this.gradeLevel = gradeLevel;
     }
 
@@ -80,6 +80,6 @@ public class Student {
         System.out.println(" Giới tính: " + (this.getSex() ? "Nam" : "Nữ"));
         System.out.println(" Số điện thoại: " + this.getPhoneNumber());
         System.out.println(" Trường đại học: " + this.getUniversityName());
-        System.out.println(" Cấp độ: " + (this.getGradeLevel() != null ? this.getGradeLevel().name() : "Chưa xác định"));
+        System.out.println(" Cấp độ: " + (this.getGradeLevel() != null ? this.getGradeLevel() : "Chưa xác định"));
     };
 }
