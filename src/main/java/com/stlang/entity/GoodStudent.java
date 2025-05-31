@@ -2,7 +2,7 @@ package com.stlang.entity;
 
 import java.util.Date;
 
-public class GoodStudent extends Student {
+public class GoodStudent extends Student implements Comparable<GoodStudent> {
 
     private double gpa;
     private String bestRewardName;
@@ -38,5 +38,17 @@ public class GoodStudent extends Student {
         super.ShowMyInfo();
         System.out.println("GPA: " + gpa);
         System.out.println("Best reward name: " + bestRewardName);
+    }
+
+    @Override
+    public int compareTo(GoodStudent other) {
+        // So sánh GPA trước nè //
+        double gpaComparison = other.getGpa() - this.getGpa();
+        if(gpaComparison > 0)
+            return 1;
+        else if(gpaComparison < 0)
+            return -1;
+        // Nếu GPA bằng nhau thì so sánh theo tên đầy đủ (tăng dần)
+        return this.getFullName().compareTo(other.getFullName());
     }
 }
